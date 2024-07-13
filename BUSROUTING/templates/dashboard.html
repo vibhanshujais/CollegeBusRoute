@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body{
+            background-color: rgb(245, 242, 237);
+            font-size: larger;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        #outer-table {
+            margin-top: 40px;
+            width: 100%;
+            height: 500px;
+            background-color: azure;
+            box-shadow: black 3px 5px 15px;
+            border-radius: 30px;
+        }
+        .inner-table {
+            height:500px;
+        }
+        #inner-table1{
+            text-align: left;
+            margin-left: 100px;
+        }
+        #inner-table2{
+            text-align: left;
+        }
+        @media (max-width: 900px){
+            body{
+                font-size: small;
+            }
+            #inner-table2{
+                text-align: left;
+            }
+            #outer-table-column1{
+                text-align: left;
+                width: 100px;
+                padding-left: 10px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <table id="outer-table">
+        <tr>
+            <td id="outer-table-column1">
+                <table class="inner-table" mid="inner-table1">
+                    <tr><th>College Id</th></tr>
+                    <tr><th>Name</th></tr>
+                    <tr><th>Branch</th></tr>
+                    <tr><th>College</th></tr>
+                    <tr><th>Year</th></tr>
+                    <tr><th>Contact No</th></tr>
+                    <tr><th>Email ID</th></tr>
+                    <tr><th>Boarding Point</th></tr>
+                    <tr><th>Bus No</th></tr>
+                    <tr><th>Driver Name</th></tr>
+                    <tr><th>Driver Contact</th></tr>
+                    <tr><th>Bus Route</th></tr>
+                </table>
+            </td>
+            <td>
+                <table class="inner-table" id="inner-table2">
+                    {% for i in key %}
+                        <tr><td>{{i}}</td></tr>
+                    {% endfor %}
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
