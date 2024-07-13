@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'busrouting.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'info',
+        'NAME': 'database_name',
         'USER': 'root',
-        'PASSWORD': 'J@iswal9971',
+        'PASSWORD': '********',
         'HOST': 'localhost',
         'PORT': '3306',
     }
